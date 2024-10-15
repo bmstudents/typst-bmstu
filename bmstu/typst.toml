@@ -1,6 +1,6 @@
 [package]
 name = "bmstu"
-version = "0.1.0"
+version = "0.1.1"
 entrypoint = "bmstu.typ"
 authors = [
     "vzalygin <https://github.com/vzalygin",

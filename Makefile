@@ -33,10 +33,10 @@ create_dir_lib:
 	@mkdir -p $(bmstu_package)
 
 copy_files:
-	@cp -r $(dir $(lastword $(MAKEFILE_LIST)))bmstu/* $(bmstu_package)
+	@cp -r $(dir $(lastword $(MAKEFILE_LIST)))/bmstu/* $(bmstu_package)
 
 create_dir_conf:
-    @mkdir -p $(dataConf)/typst
+	@mkdir -p $(dataConf)/typst
 
 config:
-    @ln -s $(bmstu_package)bmstu.config.typ dataConf/typst/
+	@ln -s $(bmstu_package)/bmstu.config.typ $(dataConf)/typst
