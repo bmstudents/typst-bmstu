@@ -1,2 +1,3 @@
-#import "report_tituls.typ": *
-#import "g7.32-2017.typ": *
+#import "title/report.typ": *
+#import "title/utils.typ": *
+#import "page-loader.typ": *
