@@ -13,3 +13,4 @@ repository = "https://github.com/pluttan/typst-bmstu"
 keywords = ["bmstu", "student-work", "title"]
 disciplines = ["education"]
 categories = ["report", "paper", "thesis"]
+compiler = "0.12.0"
