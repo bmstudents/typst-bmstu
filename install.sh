@@ -30,7 +30,7 @@ main() {
 
     echo "${C_GREEN}Installing \"bmstu\" (version=\"$bmstu_tag\") and \"gost7.32-2017\" (version=\"$gost_tag\") packages...${NO_FORMAT}"
 
-    if [ "$OSTYPE" = "darwin"* ]; then 
+    if [[ "$OSTYPE" == darwin* ]]; then 
         # macos
         home_dir="$HOME/Library/Application Support/typst"
     else
