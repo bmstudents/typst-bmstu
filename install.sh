@@ -31,6 +31,7 @@ main() {
     echo "${C_GREEN}Installing typst 0.12.0${NO_FORMAT}"
 
     curl -fsSL https://typst.community/typst-install/install.sh | sh -s 0.12.0
+    sudo ln -s ~/.typst/bin/typst /usr/local/bin
 
     echo "${C_GREEN}Installing \"bmstu\" (version=\"$bmstu_tag\") and \"gost7.32-2017\" (version=\"$gost_tag\") packages...${NO_FORMAT}"
 
