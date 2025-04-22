@@ -53,7 +53,7 @@ main() {
     fi
     git checkout -q $bmstu_tag || return 1
 
-    package_dir="$home_dir/packages/docs/bmstu/$bmstu_tag"
+    package_dir="$home_dir/packages/local/bmstu/$bmstu_tag"
     if [ -d "$package_dir" ]; then 
         rm -rf "$package_dir"
     fi
@@ -70,7 +70,7 @@ main() {
     fi
     git checkout -q $gost_tag || return 1
 
-    package_dir="$home_dir/packages/docs/gost732-2017/$gost_tag"
+    package_dir="$home_dir/packages/local/gost732-2017/$gost_tag"
     if [ -d "$package_dir" ]; then 
         rm -rf "$package_dir"
     fi
