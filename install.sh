@@ -11,6 +11,12 @@ error() {
 }
 
 main() {
+    if ! command -v git 2>&1 >/dev/null
+    then
+        echo "Script needs ${C_RED}git${NO_FORMAT} installed to run" 
+        exit 1
+    fi
+
     if [ "$#" -eq 2 ]; then
         bmstu_tag=$1
         gost_tag=$2
