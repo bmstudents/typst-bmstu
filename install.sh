@@ -32,10 +32,10 @@ main() {
 
     if [[ "$OSTYPE" == darwin* ]]; then 
         # macos
-        home_dir="$HOME/Library/Application Support/typst"
+        home_dir="${XDG_DATA_HOME:-$HOME}/Library/Application Support/typst/packages"
     else
         # linux
-        home_dir="$HOME/.local/share/typst"
+        home_dir="$HOME/.local/share/typst/packages"
     fi
 
     clone_dir="$home_dir/tmp"
@@ -53,7 +53,7 @@ main() {
     fi
     git checkout -q $bmstu_tag || return 1
 
-    package_dir="$home_dir/packages/local/bmstu/$bmstu_tag"
+    package_dir="$home_dir/local/bmstu/$bmstu_tag"
     if [ -d "$package_dir" ]; then 
         rm -rf "$package_dir"
     fi
@@ -70,7 +70,7 @@ main() {
     fi
     git checkout -q $gost_tag || return 1
 
-    package_dir="$home_dir/packages/local/gost732-2017/$gost_tag"
+    package_dir="$home_dir/local/gost732-2017/$gost_tag"
     if [ -d "$package_dir" ]; then 
         rm -rf "$package_dir"
     fi

@@ -14,10 +14,10 @@
     sh <(curl -sSfL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/master/install.sh)
     ```
 
-    **Для Windows** выполнить скрипт:
+    **Для Windows** выполнить скрипт в `powershell`:
 
     ```powershell
-    TODO
+    Invoke-RestMethod -Uri "https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/master/install.ps1" -OutFile "$env:TEMP\install.ps1"; & "$env:TEMP\install.ps1"
     ```
 
 3. Прочитать гайд по ссылке: [тык](./docs/documentation.md)
