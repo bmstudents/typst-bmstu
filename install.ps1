@@ -27,6 +27,10 @@ function main {
         $gost_tag = "latest"
     }
 
+    Write-Host "${C_GREEN}Installing typst 0.12.0${NO_FORMAT}"
+
+    v="0.12.0"; irm https://typst.community/typst-install/install.ps1 | iex
+
     Write-Host "$C_GREEN Installing 'bmstu' (version='$bmstu_tag') and 'gost7.32-2017' (version='$gost_tag') packages... $NO_FORMAT"
 
     $home_dir = "%APPDATA%\typst\packages"
