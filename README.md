@@ -18,7 +18,30 @@
     Invoke-RestMethod -Uri "https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/master/install.ps1" -OutFile "$env:TEMP\install.ps1"; & "$env:TEMP\install.ps1"
     ```
 
-2. Прочитать гайд по ссылке: [тык](./docs/documentation.md)
+2. Создать файл `foo.typ` с содержимым
+
+    ```typst
+    #import "@local/gost732-2017:0.1.1": *
+    #import "@local/bmstu:0.1.1": *
+
+    #show: гост732-2017
+
+    #содержание()
+
+    = Введение
+
+    Краткий гайд, как начать писать документы по ГОСТ.
+
+    = Пример оформления работы по ГОСТ
+
+    #lorem(200)
+
+    = Заключение
+
+    Заключительный раздел.
+    ```
+
+3. Выполнить компиляцию файла: `typst compile foo.typ`
 
 ## Документация
 
