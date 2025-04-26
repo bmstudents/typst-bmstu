@@ -15,7 +15,7 @@
     **Для Windows** выполнить скрипт в `powershell`:
 
     ```powershell
-    Invoke-RestMethod -Uri "https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/master/install.ps1" -OutFile "$env:TEMP\install.ps1"; & "$env:TEMP\install.ps1"
+    irm https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/master/install.ps1 | iex
     ```
 
 2. Создать файл `foo.typ` с содержимым
