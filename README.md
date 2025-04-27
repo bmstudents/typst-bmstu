@@ -9,13 +9,13 @@
     **Для Linux/MacOS** выполнить скрипт:
 
     ```sh
-    sh <(curl -sSfL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/master/install.sh)
+    sh <(curl -sSfL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install.sh)
     ```
 
     **Для Windows** выполнить скрипт в `powershell`:
 
     ```powershell
-    irm https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/master/install.ps1 | iex
+    irm https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install.ps1 | iex
     ```
 
 2. Создать файл `foo.typ` с содержимым
