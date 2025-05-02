@@ -21,7 +21,7 @@
 2. Создать файл `foo.typ` с содержимым
 
     ```typst
-    #import "@local/gost732-2017:0.1.1": *
+    #import "@local/gost732-2017:0.3.0": *
     #import "@local/bmstu:0.1.1": *
 
     #show: гост732-2017
