@@ -26,7 +26,7 @@ else {
 
 Write-Host "Installing typst 0.12.0"
 
-$v="0.12.0"; irm https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install.ps1 | iex
+$v="0.12.0"; irm https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install-typst.ps1 | iex
 
 Write-Host "Installing 'bmstu' (version='$bmstu_tag') and 'gost7.32-2017' (version='$gost_tag') packages..."
 
