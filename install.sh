@@ -30,7 +30,7 @@ main() {
 
     echo "${C_GREEN}Installing typst 0.12.0${NO_FORMAT}"
 
-    curl -fsSL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install.sh | sh -s 0.12.0
+    curl -fsSL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install-typst.sh | sh -s 0.12.0
     sudo rm -f /usr/local/bin/typst
     sudo ln -s ~/.typst/bin/typst /usr/local/bin
 
