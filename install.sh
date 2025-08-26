@@ -30,12 +30,13 @@ main() {
 
     echo "${C_GREEN}Installing typst 0.12.0${NO_FORMAT}"
 
-    curl -fsSL https://typst.community/typst-install/install.sh | sh -s 0.12.0
+    curl -fsSL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install.sh | sh -s 0.12.0
+    sudo rm -f /usr/local/bin/typst
     sudo ln -s ~/.typst/bin/typst /usr/local/bin
 
     echo "${C_GREEN}Installing \"bmstu\" (version=\"$bmstu_tag\") and \"gost7.32-2017\" (version=\"$gost_tag\") packages...${NO_FORMAT}"
 
-    if [[ "$OSTYPE" == darwin* ]]; then 
+    if [ "$OSTYPE" = "darwin*" ]; then 
         # macos
         home_dir="${XDG_DATA_HOME:-$HOME}/Library/Application Support/typst/packages"
     else
