@@ -51,12 +51,12 @@
 
 ## Примеры работы
 
-- обзор возможностей библиотеки в папке [examples](https://github.com/bmstudents/typst-bmstu/tree/main/example)
+- обзор возможностей библиотеки в папке [examples](./example)
 - РПЗ по курсовой работе по дисциплине Схемотехника: [ссылка](https://github.com/vzalygin/bmstu-ics6/tree/master/cource-papers/schemach/%D1%80%D0%BF%D0%B7)
 
 ## Документация (В процессе разработки)
 
-Гайд по ссылке: [тык](./docs/documentation.md)
+Гайд по ссылке: [тык](./doc/guide.md)
 
 ## Известные ограничения
 
