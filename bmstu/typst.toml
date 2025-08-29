@@ -1,6 +1,6 @@
 [package]
 name = "bmstu"
-version = "0.2.0"
+version = "0.3.0"
 entrypoint = "bmstu.typ"
 authors = [
     "vzalygin <https://github.com/vzalygin",
@@ -13,4 +13,4 @@ repository = "https://github.com/pluttan/typst-bmstu"
 keywords = ["bmstu", "student-work", "title"]
 disciplines = ["education"]
 categories = ["report", "paper", "thesis"]
-compiler = "0.12.0"
+compiler = "0.13.0"
