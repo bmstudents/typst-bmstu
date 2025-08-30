@@ -28,19 +28,15 @@ main() {
         gost_tag="latest"
     fi
 
-    echo "${C_GREEN}Installing typst 0.13.0${NO_FORMAT}"
-
-    curl -fsSL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install-typst.sh | sh -s 0.13.0
-    sudo rm -f /usr/local/bin/typst
-    sudo ln -s ~/.typst/bin/typst /usr/local/bin
-
     echo "${C_GREEN}Installing \"bmstu\" (version=\"$bmstu_tag\") and \"gost7.32-2017\" (version=\"$gost_tag\") packages...${NO_FORMAT}"
 
-    if [ "$OSTYPE" = "darwin*" ]; then 
+    if echo "$OSTYPE" | grep -q "darwin"; then
         # macos
+        echo "Detecting mas os"
         home_dir="${XDG_DATA_HOME:-$HOME}/Library/Application Support/typst/packages"
     else
         # linux
+        echo "Detecting linux os"
         home_dir="$HOME/.local/share/typst/packages"
     fi
 
@@ -86,6 +82,17 @@ main() {
     echo "${C_GREEN}Package \"gost 7.32-2017\" version=\"$gost_tag\" was installed${NO_FORMAT}"
 
     rm -rf "$clone_dir"
+
+    echo "${C_GREEN}Installing typst 0.13.0${NO_FORMAT}"
+    curl -fsSL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install-typst.sh | sh -s 0.13.0
+
+    echo "Для работы с typst необходимо добавить исполняемый файл в PATH"
+    echo "Сделать это можно либо вручную при помощи описания выше, либо автоматически в рамках этого скрипта"
+    echo "Чтобы выполнить автоматически, необходимо ввести пароль (требуется доступ до /usr/local/bin)"
+    echo "Иначе прервать выполнение скрипта"
+
+    sudo rm -f /usr/local/bin/typst
+    sudo ln -s ~/.typst/bin/typst /usr/local/bin
 }
 
 main "$@" || error
