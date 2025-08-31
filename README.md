@@ -53,6 +53,7 @@
 
 - обзор возможностей библиотеки в папке [examples](./example)
 - РПЗ по курсовой работе по дисциплине Схемотехника: [ссылка](https://github.com/vzalygin/bmstu-ics6/tree/master/cource-papers/schemach/%D1%80%D0%BF%D0%B7)
+- Отчет по эксплуатационной практике: [ссылка](https://github.com/vzalygin/bmstu-ics6/tree/master/practices/summer-2025)
 
 ## Документация (В процессе разработки)
 
