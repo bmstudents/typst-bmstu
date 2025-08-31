@@ -81,18 +81,18 @@ main() {
 
     echo "${C_GREEN}Package \"gost 7.32-2017\" version=\"$gost_tag\" was installed${NO_FORMAT}"
 
+    echo "${C_GREEN}Installing typst 0.13.0${NO_FORMAT}"
+    curl -fsSL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install-typst.sh -o "$clone_dir/install-typst.sh"
+    chmod +x "$clone_dir/install-typst.sh"
+    "$clone_dir/install-typst.sh"
+
     rm -rf "$clone_dir"
 
-    echo "${C_GREEN}Installing typst 0.13.0${NO_FORMAT}"
-    curl -fsSL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install-typst.sh | sh -s 0.13.0
+    echo "Making symlink /usr/local/bin/typst"
+    rm -f /usr/local/bin/typst
+    ln -s ~/.typst/bin/typst /usr/local/bin
 
-    echo "Для работы с typst необходимо добавить исполняемый файл в PATH"
-    echo "Сделать это можно либо вручную при помощи описания выше, либо автоматически в рамках этого скрипта"
-    echo "Чтобы выполнить автоматически, необходимо ввести пароль (требуется доступ до /usr/local/bin)"
-    echo "Иначе прервать выполнение скрипта"
-
-    sudo rm -f /usr/local/bin/typst
-    sudo ln -s ~/.typst/bin/typst /usr/local/bin
+    echo "${C_GREEN}Typst successfully installed${NO_FORMAT}"
 }
 
 main "$@" || error
