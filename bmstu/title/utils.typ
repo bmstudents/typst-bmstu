@@ -15,7 +15,7 @@
             #set par(leading: 0.5em)
             #set align(center)
             *Министерство науки и высшего образования Российской Федерации\
-            Федеральное государственное бюджетное образовательное учреждение\
+            Федеральное государственное автономное образовательное учреждение\
             высшего образования\
             «Московский государственный технический университет\
             имени Н.Э. Баумана\
@@ -46,15 +46,15 @@
     #set text(14pt)
     
     #grid(
-        columns: (100pt, 1fr, 3.5fr),
+        columns: (150pt, 1fr, 3.5fr),
         gutter: 40pt,
         align(left)[Студент #v(12pt)], 
         align(center)[
-            #v(2pt)
+            // #v(2pt)
             #author.group
-            #v(-14pt)
+            #v(-12pt)
             #line(length: 90pt, stroke: 1pt)
-            #v(-14pt)
+            #v(-12pt)
             #text(size:10pt)[(Группа)]
         ],
         grid(
@@ -63,17 +63,17 @@
             align(center)[
                 #v(2pt)
                 #align(right)[#date]
-                #v(-14pt)
+                #v(-12pt)
                 #line(length: 100pt, stroke: 1pt)
-                #v(-14pt)
+                #v(-12pt)
                 #text(size:10pt)[(Подпись, дата)]
             ],
             align(center)[
                 #v(2pt)
                 #author.nwa
-                #v(-14pt)
+                #v(-12pt)
                 #line(length: 110pt, stroke: 1pt)
-                #v(-14pt)
+                #v(-12pt)
                 #text(size:10pt)[(И. О. Фамилия)]
             ],
         )
@@ -85,7 +85,7 @@
     #set align(bottom)
     #set text(14pt)
     #grid(
-        columns: (100pt, 1fr, 3.5fr),
+        columns: (150pt, 1fr, 3.5fr),
         gutter: 40pt,
         align(left)[#adviser.work #v(12pt)], 
         align(center)[],
@@ -95,17 +95,17 @@
             align(center)[
                 #v(2pt)
                 #align(right)[#date]
-                #v(-14pt)
+                #v(-12pt)
                 #line(length: 100pt, stroke: 1pt)
-                #v(-14pt)
+                #v(-12pt)
                 #text(size:10pt)[(Подпись, дата)]
             ],
             align(center)[
                 #v(2pt)
                 #par(leading: 0.3em)[#adviser.nwa]
-                #v(-14pt)
+                #v(-12pt)
                 #line(length: 110pt, stroke: 1pt)
-                #v(-14pt)
+                #v(-12pt)
                 #text(size:10pt)[(И. О. Фамилия)]
             ],
         )
