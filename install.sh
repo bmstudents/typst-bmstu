@@ -81,10 +81,10 @@ main() {
 
     echo "${C_GREEN}Package \"gost 7.32-2017\" version=\"$gost_tag\" was installed${NO_FORMAT}"
 
-    echo "${C_GREEN}Installing typst 0.13.0${NO_FORMAT}"
+    echo "${C_GREEN}Installing typst 0.14.2${NO_FORMAT}"
     curl -fsSL https://raw.githubusercontent.com/bmstudents/typst-bmstu/refs/heads/main/install-typst.sh -o "$clone_dir/install-typst.sh"
     chmod +x "$clone_dir/install-typst.sh"
-    "$clone_dir/install-typst.sh"
+    "$clone_dir/install-typst.sh" 0.14.2
 
     rm -rf "$clone_dir"
 
